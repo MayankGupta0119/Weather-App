@@ -125,6 +125,11 @@ function renderWeatherInfo(data) {
   } else if (data?.weather?.[0]?.description.toLowerCase().includes("mist")) {
     weathertext.style.backgroundImage = 'url("./mist.jpg")';
     wrapdiv.style.backgroundImage = 'url("./mist.jpg")';
+  } else if (
+    data?.weather?.[0]?.description.toLowerCase().includes("drizzle")
+  ) {
+    weathertext.style.backgroundImage = 'url("./drizzle.jpg")';
+    wrapdiv.style.backgroundImage = 'url("./drizzle.jpg")';
   }
   weathericon.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
   temp.innerText = `${data?.main?.temp} °C`;
