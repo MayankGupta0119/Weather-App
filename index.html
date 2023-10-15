@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Makasar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper" wrapclass>
+      <div class="data1_sec">
+        <div class="grant-location">
+          <!-- grant location -->
+          <img
+            src="./location.gif"
+            width="140px"
+            height="140px"
+            class="location_img"
+            loading="lazy"
+            alt="location logo"
+          />
+          <p>Grant location Access</p>
+          <p>Allow Access to get weather Information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+        <div weatherCondtionImage class="weatherImage"></div>
+        <div class="data-at-bottom" dataBottom>
+          <div class="location1" cityname></div>
+          <div class="location2" countryname></div>
+          <div class="wheather_data">
+            <div class="celcius">
+              <p class="number" tempData></p>
+              <!-- <p>&deg C</p> -->
+              <img />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="data2_sec">
+        <div class="tab-container">
+          <p class="tab" data-userweather>Your Wheather</p>
+          <p class="tab" data-searchweather>Search Weather</p>
+        </div>
+        <!-- search form -->
+        <div class="weather-container-2">
+          <form class="form-container" data-searchform>
+            <input
+              placeholder="Search for City..."
+              data-searchInput
+              searchtab
+            />
+            <button class="btn submit">
+              <img
+                src="./search-logo.svg"
+                alt=""
+                width="50"
+                height="50"
+                loading="lazy"
+              />
+            </button>
+          </form>
+          <div class="notfound" not-found>
+            <img
+              src="./not-found.png"
+              alt=""
+              width="300"
+              height="300"
+              loading="lazy"
+            />
+            <p>City Not Found/Enter Valid Name</p>
+          </div>
+          <!-- loading screen -->
+          <div class="loading-container">
+            <img
+              src="./load.gif"
+              alt=""
+              width="150"
+              height="150"
+              loading="lazy"
+            />
+          </div>
+          <!-- show info -->
+          <div class="user-info-contianer">
+            <!-- city name with flag -->
+            <div class="name">
+              <p data-cityname></p>
+              <img data-countryicon />
+            </div>
+            <!-- weather condition -->
+            <p data-description></p>
+            <img weather-icon />
+            <p data-temp></p>
+            <!-- not found -->
+
+            <!-- 3 cards -->
+            <div class="parameter-container">
+              <!-- card 1 -->
+              <div class="parameter">
+                <img
+                  src="./windfinal.gif"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <p>Windspeed</p>
+                <p data-windspeed></p>
+              </div>
+              <!-- card 2 -->
+              <div class="parameter">
+                <img
+                  src="./humidityfinal.gif"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <p>Humidity</p>
+                <p data-humidity></p>
+              </div>
+              <!-- card 3 -->
+              <div class="parameter">
+                <img
+                  src="./cloudsfinal.gif"
+                  width="50"
+                  height="50"
+                  loading="lazy"
+                />
+                <p>Clouds</p>
+                <p data-cloud></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
