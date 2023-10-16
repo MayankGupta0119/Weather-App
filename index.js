@@ -130,6 +130,9 @@ function renderWeatherInfo(data) {
   ) {
     weathertext.style.backgroundImage = 'url("./drizzle.jpg")';
     wrapdiv.style.backgroundImage = 'url("./drizzle.jpg")';
+  } else if (data?.weather?.[0]?.description.toLowerCase().includes("smoke")) {
+    weathertext.style.backgroundImage = 'url("./smoke.jpg")';
+    wrapdiv.style.backgroundImage = 'url("./smoke.jpg")';
   }
   weathericon.src = `http://openweathermap.org/img/w/${data?.weather?.[0]?.icon}.png`;
   temp.innerText = `${data?.main?.temp} °C`;
